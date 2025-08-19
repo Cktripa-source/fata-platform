@@ -412,7 +412,7 @@ export default function Home() {
 
       <div className={`flex flex-col ${isVisible ? 'animate-fade-in-up' : 'opacity-4'}`}>
         {/* Enhanced Hero Section */}
-        <section className="relative h-screen w-full overflow-hidden hero-bg">
+        <section className="relative h-screen w-full overflow-hidden hero-bg ">
           <div className="floating-shapes">
             <div className="shape"></div>
             <div className="shape"></div>
@@ -430,9 +430,9 @@ export default function Home() {
 
           <div className="absolute inset-0 hero-gradient" />
 
-          <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-4">
-            <div className="max-w-6xl mx-auto">
-              <h1 className="hero-title text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+          <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-4 mt-40 md:mt-0">
+            <div className="max-w-6xl mx-auto ">
+              <h1 className="hero-title text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight ">
                 Uniting Africa's
                 <br />
                 <span className="animate-float inline-block">Traditional Leaders</span>
