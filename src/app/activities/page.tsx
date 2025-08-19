@@ -1,4 +1,8 @@
 import Image from 'next/image';
+import Meet6 from '../image/meet6.jpeg';
+import Meet7 from '../image/meet7.jpeg';
+import Meet8 from '../image/meet8.jpeg';
+import Meet9 from '../image/meet9.jpeg';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import SummarizeButton from '@/components/summarize-button';
 
@@ -6,28 +10,28 @@ const activities = [
   {
     value: "item-1",
     title: "Annual Forums and Conferences",
-    image: "https://placehold.co/600x400.png",
+    image: Meet7,
     hint: "conference room",
     content: "Our annual forums and conferences are flagship events that bring together traditional leaders, government officials, civil society representatives, and international partners. These gatherings serve as crucial platforms for high-level dialogue on pressing issues such as conflict resolution, sustainable development, and cultural preservation. Each forum aims to produce actionable outcomes, policy recommendations, and strengthened networks to advance our collective goals. Past events have been hosted in major cities across Africa, each focusing on a unique theme relevant to the continent's progress and challenges. The insights and collaborations from these forums have led to tangible projects and peace-building successes in multiple regions."
   },
   {
     value: "item-2",
     title: "Peace and Reconciliation Missions",
-    image: "https://placehold.co/600x400.png",
+    image: Meet8,
     hint: "community meeting",
     content: "FATA is actively involved in mediating and resolving conflicts by leveraging the respected status of traditional leaders. Our peace and reconciliation missions deploy delegations of esteemed leaders to conflict-affected areas to facilitate dialogue, calm tensions, and build bridges between divided communities. These missions are grounded in traditional principles of justice and reconciliation, often proving more effective than purely formal diplomatic efforts. We have successfully intervened in several inter-tribal disputes over land and resources, leading to peace agreements and the establishment of local peace committees to sustain harmony. Testimonials from community members highlight the profound impact of these interventions in restoring social cohesion."
   },
   {
     value: "item-3",
     title: "Cultural Exchange Programs",
-    image: "https://placehold.co/600x400.png",
+    image: Meet9,
     hint: "traditional dance",
     content: "To foster unity and preserve our rich heritage, FATA organizes cultural exchange programs that connect communities from different parts of the continent. These programs include youth delegations visiting other kingdoms and chiefdoms, joint cultural festivals, and workshops on traditional crafts, languages, and oral histories. By promoting cross-cultural understanding and appreciation, we are building a stronger, more unified African identity. These exchanges not only educate the younger generation about their own and other cultures but also create lasting friendships and networks that transcend ethnic and national boundaries, promoting a shared sense of belonging."
   },
   {
     value: "item-4",
     title: "Partnerships and Collaborations",
-    image: "https://placehold.co/600x400.png",
+    image: Meet6,
     hint: "handshake agreement",
     content: "Our work is strengthened through strategic partnerships with a wide range of organizations. We collaborate with national governments, the African Union, United Nations agencies, non-governmental organizations (NGOs), and academic institutions. These partnerships enable us to amplify our impact, access critical resources, and contribute to broader policy discussions. Joint projects have included community health initiatives with health-focused NGOs, educational programs with universities, and advocacy campaigns with international bodies to integrate traditional governance into national legal frameworks. These collaborations are essential to achieving our vision of a developed and peaceful Africa."
   }
@@ -37,7 +41,7 @@ export default function ActivitiesPage() {
   return (
     <div className="container py-12 px-4 md:px-8">
       <header className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-headline font-bold">Our Activities</h1>
+        <h1 className="text-4xl md:text-5xl font-headline font-bold text-amber-800">Our Activities</h1>
         <p className="mt-4 text-lg max-w-3xl mx-auto text-foreground/80">
           Explore the main initiatives and projects that drive our mission forward.
         </p>

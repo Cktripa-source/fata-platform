@@ -13,11 +13,12 @@ import { cn } from '@/lib/utils';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
-  { href: '/leadership', label: 'Leadership' },
+  
   { href: '/activities', label: 'Activities' },
   { href: '/events', label: 'Events' },
   { href: '/get-involved', label: 'Get Involved' },
   { href: '/news', label: 'News & Media' },
+  { href: '/leadership', label: 'Leadership' },
   { href: '/contact', label: 'Contact' },
 ];
 

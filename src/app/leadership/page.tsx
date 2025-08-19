@@ -1,5 +1,6 @@
 'use client';
-
+import Image from 'next/image';
+import Meet1 from '../image/meet 1.jpeg'
 import React, { useState, useEffect, useRef } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
@@ -218,8 +219,8 @@ export default function LeadershipPage() {
             <Card className="relative bg-white/95 backdrop-blur-xl border border-amber-200 rounded-3xl overflow-hidden hover:bg-white hover:shadow-2xl transition-all duration-500">
               <div className="p-8">
                 <div className="aspect-video relative rounded-2xl overflow-hidden bg-gradient-to-br from-amber-50 to-yellow-50 border border-amber-100">
-                  <img
-                    src="https://images.unsplash.com/photo-1553028826-f4804151e0b2?w=1200&h=800&fit=crop&crop=center"
+                  <Image
+                    src={Meet1}
                     alt="FATA Organizational Chart"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
@@ -253,12 +254,12 @@ export default function LeadershipPage() {
             {executiveLeaders.map((leader, index) => {
               // Use different images for variety
               const imageUrls = [
-                "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-                "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-                "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
-                "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=400&h=400&fit=crop&crop=face",
-                "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-                "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
+                Meet1,
+                 Meet1,
+                  Meet1,
+                   Meet1,
+                    Meet1,
+        
               ];
 
               return (
@@ -276,7 +277,7 @@ export default function LeadershipPage() {
                   <Card className="relative bg-white/95 backdrop-blur-xl border border-amber-200 rounded-3xl overflow-hidden h-full hover:bg-white hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                     <CardHeader className="p-0 relative">
                       <div className="aspect-square relative overflow-hidden">
-                        <img
+                        <Image
                           src={imageUrls[index % imageUrls.length]}
                           alt={`Portrait of ${leader.name}`}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -353,8 +354,8 @@ export default function LeadershipPage() {
                   <Card className="relative bg-white/95 backdrop-blur-xl border border-amber-200 rounded-3xl overflow-hidden h-full hover:bg-white hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105">
                     <CardHeader className="p-0 relative">
                       <div className="aspect-square relative">
-                        <img
-                          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
+                        <Image
+                          src={Meet1}
                           alt={`Portrait of ${leader.name}`}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         />
@@ -410,8 +411,8 @@ export default function LeadershipPage() {
                   <Card className="relative bg-white/95 backdrop-blur-xl border border-amber-200 rounded-3xl overflow-hidden h-full hover:bg-white hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105">
                     <CardHeader className="p-0 relative">
                       <div className="aspect-square relative">
-                        <img
-                          src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face"
+                        <Image
+                          src={Meet1}
                           alt={`Portrait of ${leader.name}`}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         />

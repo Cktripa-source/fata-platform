@@ -425,7 +425,7 @@ export function Footer() {
         }
       `}</style>
 
-      <footer className="footer-gradient text-white relative">
+      <footer className="footer-gradient text-white relative mt-10">
         <div className="floating-shapes">
           <div className="shape"></div>
           <div className="shape"></div>

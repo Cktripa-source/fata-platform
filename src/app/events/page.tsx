@@ -5,13 +5,21 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Calendar, MapPin, Sparkles, ArrowRight, Clock, Users } from 'lucide-react';
 
+import Image from 'next/image';
+import Meet4 from '../image/meet4.jpeg';
+import Meet5 from '../image/meet5.jpeg';
+import Meet6 from '../image/meet6.jpeg';
+import Meet7 from '../image/meet7.jpeg';
+import Meet8 from '../image/meet8.jpeg';
+import Meet9 from '../image/meet9.jpeg';
+import { useRouter } from 'next/navigation';
 const upcomingEvents = [
   {
     title: 'FATA Annual General Assembly 2024',
     date: 'October 25-27, 2024',
     location: 'Accra, Ghana',
     description: 'The premier gathering of traditional leaders to set the agenda for the upcoming year, featuring keynote speeches, workshops, and cultural showcases. This year\'s theme is "Youth Engagement in Traditional Governance". Registration is now open for all members and partners.',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center',
+    image:Meet4,
     gradient: 'from-amber-600 to-yellow-600',
     attendees: '500+ Expected',
     duration: '3 Days',
@@ -24,7 +32,7 @@ const pastEvents = [
     date: 'March 15, 2024',
     location: 'Addis Ababa, Ethiopia',
     summary: 'A landmark summit that brought together traditional leaders from across the Horn of Africa to address regional conflicts and foster cross-border cooperation. Key outcomes included the signing of a joint peace declaration and the establishment of a regional council of elders for conflict mediation.',
-    image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=400&fit=crop&crop=center',
+    image: Meet5,
     gradient: 'from-amber-700 to-orange-600',
     impact: '12 Countries Participated',
     outcome: 'Joint Peace Declaration',
@@ -34,7 +42,7 @@ const pastEvents = [
     date: 'November 20, 2023',
     location: 'Dakar, Senegal',
     summary: 'A vibrant celebration of African cultural diversity, featuring music, dance, art, and storytelling from over 30 different traditions. The festival attracted thousands of visitors and provided a platform for artisans and performers to showcase their talents.',
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop&crop=center',
+    image:Meet6,
     gradient: 'from-yellow-600 to-amber-700',
     impact: '30+ Traditions Featured',
     outcome: '5000+ Visitors',
@@ -166,9 +174,11 @@ export default function EventsPage() {
                     {/* Image Section */}
                     <div className="lg:w-2/5 relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-br from-amber-600/20 to-yellow-600/20 z-10" />
-                      <img
+                      <Image
                         src={event.image}
                         alt={event.title}
+                        width={800}
+                        height={600}
                         className="w-full h-80 lg:h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute top-4 left-4 z-20">
@@ -254,9 +264,11 @@ export default function EventsPage() {
                   {/* Image Header */}
                   <div className="relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30 z-10" />
-                    <img
+                    <Image
                       src={event.image}
                       alt={event.title}
+                      width={800}
+                      height={400}
                       className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute bottom-4 left-4 z-20">

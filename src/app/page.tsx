@@ -2,7 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Calendar, Heart, Mail, Target, Users, Star, Globe, Award, Zap, ChevronDown, Play } from 'lucide-react';
-
+import Image from 'next/image';
+import Meet1 from './image/meet 1.jpeg';
+import Meet2 from './image/meet 2.jpeg';
+import Meet3 from './image/meet 3.jpeg';
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -23,7 +26,7 @@ export default function Home() {
     {
       title: 'Annual FATA Conference Concludes Successfully',
       description: 'Leaders from across the continent gathered to discuss key issues of peace and development in a groundbreaking summit.',
-      image: 'https://images.unsplash.com/photo-1590736969955-71cc94901144?w=600&h=400&fit=crop&crop=center',
+      image:Meet1,
       hint: 'african conference',
       link: '/news',
       category: 'Conference',
@@ -32,7 +35,7 @@ export default function Home() {
     {
       title: 'New Cultural Exchange Program Launched',
       description: 'FATA launches an innovative initiative to promote inter-tribal understanding and heritage preservation across Africa.',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop&crop=center',
+      image:Meet2,
       hint: 'cultural exchange',
       link: '/activities',
       category: 'Programs',
@@ -41,7 +44,7 @@ export default function Home() {
     {
       title: 'FATA Mediates Regional Conflict Resolution',
       description: 'A successful peace mission led by FATA representatives brings harmony and understanding to communities.',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop&crop=center',
+      image:Meet3,
       hint: 'peace negotiation',
       link: '/news',
       category: 'Peace',
@@ -407,7 +410,7 @@ export default function Home() {
         }
       `}</style>
 
-      <div className={`flex flex-col ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
+      <div className={`flex flex-col ${isVisible ? 'animate-fade-in-up' : 'opacity-4'}`}>
         {/* Enhanced Hero Section */}
         <section className="relative h-screen w-full overflow-hidden hero-bg">
           <div className="floating-shapes">
@@ -418,8 +421,8 @@ export default function Home() {
 
           {/* Hero Image Placeholder */}
           <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-amber-100 via-orange-50 to-yellow-100">
-            <img 
-              src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1920&h=1080&fit=crop&crop=center" 
+            <Image 
+              src={Meet1} 
               alt="African landscape showcasing traditional leadership"
               className="w-full h-full object-cover opacity-20"
             />
@@ -528,7 +531,7 @@ export default function Home() {
                   <div key={index} className="flex-none w-full md:w-1/2 lg:w-1/3 snap-start">
                     <div className="news-card h-full flex flex-col overflow-hidden rounded-2xl shadow-lg cursor-pointer">
                       <div className="relative aspect-[16/10] overflow-hidden">
-                        <img
+                        <Image
                           src={news.image}
                           alt={news.title}
                           className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
